@@ -1,2 +1,3 @@
 *.pyc
 *.DS_Store
+Openfisca_cnous.egg-info/*

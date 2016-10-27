@@ -5,3 +5,11 @@
     </CODE>
   </NODE>
 </NODE>
+
+<NODE code="aglae_bourses" description="Aides en fonction des revenus et des points de charges">
+	<NODE code="ech_0" description="Grilles pour echelon O bis" format="float" type="monetary" >
+		<NODE code="pc_0" description="valeur">
+
+		</NODE>
+	</NODE>	
+</NODE>

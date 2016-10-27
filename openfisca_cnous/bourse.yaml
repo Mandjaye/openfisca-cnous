@@ -1,0 +1,12 @@
+- name: "un etudiant sans fraterie avec un revenu de 33100, distance 29km"
+  period: 2016-01
+  foyer_fiscaux :
+    personnnes_a_charge: ["enfant"]
+    rbg:
+      2016: 1000 
+      2015: 1000
+      2014: 33100 
+  individus:
+    distance_domicile_familial: 29
+  output_variables:
+    bourse: 1009
