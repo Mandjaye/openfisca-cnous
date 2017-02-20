@@ -3,7 +3,7 @@ from os import path
 import ipdb
 import numpy as np
 
-print path.dirname(__file__)	
+print path.dirname(__file__)
 plafonds = []
 with open(path.join(path.dirname(__file__),'plafonds.csv')) as csv_file:
    csv_reader = csv.reader(csv_file, delimiter=',', quotechar='"')

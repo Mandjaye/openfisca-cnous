@@ -5,5 +5,5 @@ from openfisca_france.model.base import *  # noqa analysis:ignore
 
 class distance_domicile_familial(Variable):
     column = FloatCol
-    entity = Individus
+    entity = Individu
     label = u"Distance en KM entre lieu d'inscription et domicile familiale d'origine."

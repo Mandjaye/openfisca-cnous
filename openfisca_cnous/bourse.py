@@ -5,15 +5,15 @@ from numpy import (maximum as max_, logical_not as not_, absolute as abs_, minim
 
 from openfisca_france.model.base import *  # noqa analysis:ignore
 
-from openfisca_cnous.plafonds import get_plafond    
+from openfisca_cnous.plafonds import get_plafond
 import ipdb
 #       ipdb.set_trace()
 import numpy as np
 
 
-class bourse(Variable): 
+class bourse(Variable):
     column = FloatCol
-    entity = Individus
+    entity = Individu
     label = u"Aide financière accordée à un écycle_suptudiant en fonction de(s revenus d'imposition/ des freres et soeurs/ de la distance par rapoort au foyer."
 
     def function(individu, period, legislation):
@@ -25,15 +25,15 @@ class bourse(Variable):
         nbr_siblings_cycle_sup = individu.foyer_fiscal.project(nbr_siblings_cycle_sup)
 
         ## total de personne
-        nbr_siblings = individu.foyer_fiscal.nb_persons(role=PERSONNE_A_CHARGE)
+        nbr_siblings = individu.foyer_fiscal.nb_persons(role=FoyerFiscal.PERSONNE_A_CHARGE)
 
         # cast foyer fiscal -> individu
         nbr_siblings = individu.foyer_fiscal.project(nbr_siblings)
 
-        nbr_siblings_non_cycle_sup = nbr_siblings - nbr_siblings_cycle_sup 
+        nbr_siblings_non_cycle_sup = nbr_siblings - nbr_siblings_cycle_sup
         #montant_par_enfant = legislation(period).ma_collectivite.mon_aide.montant
         distance = individu('distance_domicile_familial', period)
-        cond_dist_0 = distance >250 
+        cond_dist_0 = distance >250
         cond_dist_1 = distance > 30
         cond_dist_2 = distance < 30
 
