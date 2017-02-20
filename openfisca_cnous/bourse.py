@@ -6,8 +6,6 @@ from numpy import (maximum as max_, logical_not as not_, absolute as abs_, minim
 from openfisca_france.model.base import *  # noqa analysis:ignore
 
 from openfisca_cnous.plafonds import get_plafond
-import ipdb
-#       ipdb.set_trace()
 import numpy as np
 
 

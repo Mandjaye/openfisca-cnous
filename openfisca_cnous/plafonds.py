@@ -1,6 +1,5 @@
 import csv
 from os import path
-import ipdb
 import numpy as np
 
 print path.dirname(__file__)
